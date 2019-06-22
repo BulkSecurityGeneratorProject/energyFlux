@@ -1,0 +1,40 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.synsoft",
+      "nativeLanguage": "en"
+    },
+    "jhipsterVersion": "6.1.1",
+    "applicationType": "monolith",
+    "baseName": "EnergyFlux",
+    "packageName": "com.synsoft",
+    "packageFolder": "com/synsoft",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": false,
+    "websocket": "spring-websocket",
+    "databaseType": "mongodb",
+    "devDatabaseType": "mongodb",
+    "prodDatabaseType": "mongodb",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "ZjJkMDVlZjExNTA4MzNkM2U5ZTJhNGRhMTA0ZjhhZmFhOTQ4MTYwYTFlMGM5MDhlZDZmOGYzNzE1YzQ1N2I2NzNjNTZjYThlNjA1MjE5MGRhYzdiNjgyZTIyZmIyZjRkMmJmNTM3MDExZTJhNDMwMmIxYTEzNzc0ZWNmOWFmZWM=",
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "clientFramework": "angularX",
+    "clientTheme": "none",
+    "clientThemeVariant": "",
+    "testFrameworks": ["protractor"],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": true,
+    "nativeLanguage": "en",
+    "languages": ["en", "sr"]
+  }
+}

@@ -1,0 +1,16 @@
+version: '2'
+services:
+  energyflux-mongodb:
+    image: mongo:4.0.10
+    ports:
+      - '27017:27017'
+    command: mongos --configdb energyflux-mongodb-config
+  energyflux-mongodb-node:
+    build:
+      context: .
+      dockerfile: mongodb/MongoDB.Dockerfile
+    command: mongod --replSet rs1 --noprealloc --smallfiles
+  energyflux-mongodb-config:
+    image: mongo:4.0.10
+    container_name: energyflux-mongodb-config
+    command: mongod --noprealloc --smallfiles --configsvr --dbpath /data/db
