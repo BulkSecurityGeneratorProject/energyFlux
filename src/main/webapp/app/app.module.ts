@@ -3,9 +3,10 @@ import './vendor.ts';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
-import { NgbDatepickerConfig } from '@ng-bootstrap/ng-bootstrap';
+import { NgbDatepickerConfig, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgxWebstorageModule } from 'ngx-webstorage';
 import { NgJhipsterModule } from 'ng-jhipster';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AuthInterceptor } from './blocks/interceptor/auth.interceptor';
 import { AuthExpiredInterceptor } from './blocks/interceptor/auth-expired.interceptor';
@@ -14,16 +15,17 @@ import { NotificationInterceptor } from './blocks/interceptor/notification.inter
 import { EnergyFluxSharedModule } from 'app/shared';
 import { EnergyFluxCoreModule } from 'app/core';
 import { EnergyFluxAppRoutingModule } from './app-routing.module';
-import { EnergyFluxHomeModule } from './home/home.module';
-import { EnergyFluxAccountModule } from './account/account.module';
-import { EnergyFluxEntityModule } from './entities/entity.module';
+import { EnergyFluxDashboardModule } from './dashboard/dashboard.module';
 import * as moment from 'moment';
 // jhipster-needle-angular-add-module-import JHipster will add new module here
 import { JhiMainComponent, NavbarComponent, FooterComponent, PageRibbonComponent, ActiveMenuDirective, ErrorComponent } from './layouts';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   imports: [
+    CommonModule,
     BrowserModule,
+    BrowserAnimationsModule,
     NgxWebstorageModule.forRoot({ prefix: 'jhi', separator: '-' }),
     NgJhipsterModule.forRoot({
       // set below to true to make alerts look like toast
@@ -32,12 +34,10 @@ import { JhiMainComponent, NavbarComponent, FooterComponent, PageRibbonComponent
       i18nEnabled: true,
       defaultI18nLang: 'en'
     }),
+    NgbModule.forRoot(),
     EnergyFluxSharedModule.forRoot(),
     EnergyFluxCoreModule,
-    EnergyFluxHomeModule,
-    EnergyFluxAccountModule,
-    // jhipster-needle-angular-add-module JHipster will add new module here
-    EnergyFluxEntityModule,
+    EnergyFluxDashboardModule,
     EnergyFluxAppRoutingModule
   ],
   declarations: [JhiMainComponent, NavbarComponent, ErrorComponent, PageRibbonComponent, ActiveMenuDirective, FooterComponent],

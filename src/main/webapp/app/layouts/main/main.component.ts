@@ -1,31 +1,47 @@
-import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRouteSnapshot, NavigationEnd, NavigationError } from '@angular/router';
-
-import { JhiLanguageHelper } from 'app/core';
+import { Component, OnInit, HostListener, ViewEncapsulation } from '@angular/core';
+import { Router } from '@angular/router';
+import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 
 @Component({
   selector: 'jhi-main',
+  styleUrls: ['./main.component.scss'],
   templateUrl: './main.component.html'
 })
 export class JhiMainComponent implements OnInit {
-  constructor(private jhiLanguageHelper: JhiLanguageHelper, private router: Router) {}
+  color = 'defaultdark';
+  showSettings = false;
+  showMinisidebar = false;
+  showDarktheme = false;
+  showRtl = false;
 
-  private getPageTitle(routeSnapshot: ActivatedRouteSnapshot) {
-    let title: string = routeSnapshot.data && routeSnapshot.data['pageTitle'] ? routeSnapshot.data['pageTitle'] : 'energyFluxApp';
-    if (routeSnapshot.firstChild) {
-      title = this.getPageTitle(routeSnapshot.firstChild) || title;
-    }
-    return title;
-  }
+  public innerWidth: any;
+
+  public config: PerfectScrollbarConfigInterface = {};
+
+  constructor(public router: Router) {}
 
   ngOnInit() {
-    this.router.events.subscribe(event => {
-      if (event instanceof NavigationEnd) {
-        this.jhiLanguageHelper.updateTitle(this.getPageTitle(this.router.routerState.snapshot.root));
-      }
-      if (event instanceof NavigationError && event.error.status === 404) {
-        this.router.navigate(['/404']);
-      }
-    });
+    if (this.router.url === '/') {
+      this.router.navigate(['/dashboard']);
+    }
+    this.handleLayout();
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {
+    this.handleLayout();
+  }
+
+  toggleSidebar() {
+    this.showMinisidebar = !this.showMinisidebar;
+  }
+
+  handleLayout() {
+    this.innerWidth = window.innerWidth;
+    if (this.innerWidth < 1170) {
+      this.showMinisidebar = true;
+    } else {
+      this.showMinisidebar = false;
+    }
   }
 }

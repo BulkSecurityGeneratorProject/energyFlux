@@ -7,16 +7,13 @@ const LAYOUT_ROUTES = [navbarRoute, ...errorRoute];
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(
-      [
-        {
-          path: 'admin',
-          loadChildren: './admin/admin.module#EnergyFluxAdminModule'
-        },
-        ...LAYOUT_ROUTES
-      ],
-      { enableTracing: DEBUG_INFO_ENABLED }
-    )
+    RouterModule.forRoot([
+      {
+        path: 'admin',
+        loadChildren: './admin/admin.module#EnergyFluxAdminModule'
+      },
+      ...LAYOUT_ROUTES
+    ])
   ],
   exports: [RouterModule]
 })
