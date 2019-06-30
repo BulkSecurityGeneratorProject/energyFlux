@@ -4,8 +4,6 @@ import { Component } from '@angular/core';
   templateUrl: './cs.component.html'
 })
 export class CustomerSupportComponent {
-  constructor() {}
-
   recentcomments: Object[] = [
     {
       image: 'assets/images/users/1.jpg',

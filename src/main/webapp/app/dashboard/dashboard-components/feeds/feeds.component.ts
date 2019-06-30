@@ -4,9 +4,7 @@ import { Component } from '@angular/core';
   templateUrl: './feeds.component.html'
 })
 export class FeedsComponent {
-  constructor() {}
-
-  feeds: Object[] = [
+  feeds: any[] = [
     {
       bg: 'bg-light-info',
       icon: 'fa fa-bell-o',

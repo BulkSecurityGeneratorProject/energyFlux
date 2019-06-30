@@ -4,8 +4,6 @@ import { Component } from '@angular/core';
   templateUrl: './te.component.html'
 })
 export class TotalEarningComponent {
-  constructor() {}
-
   totalearnings: Object[] = [
     {
       image: 'assets/images/users/1.jpg',
