@@ -38,10 +38,5 @@ export class JhiMainComponent implements OnInit {
 
   handleLayout() {
     this.innerWidth = window.innerWidth;
-    if (this.innerWidth < 1170) {
-      this.showMinisidebar = true;
-    } else {
-      this.showMinisidebar = false;
-    }
   }
 }

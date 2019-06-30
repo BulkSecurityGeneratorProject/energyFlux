@@ -1,12 +1,15 @@
->>> .ct-series-c .ct-slice-donut {
-  stroke: rgb(236, 239, 241);
-}
->>> .ct-series-d .ct-slice-donut {
-  stroke: rgb(116, 90, 242);
-}
->>> .ct-series-b .ct-slice-donut {
-  stroke: rgb(38, 198, 218);
-}
->>> .ct-series-a .ct-slice-donut {
-  stroke: rgb(30, 136, 229);
+.region-list {
+  @media screen and (max-width: 990px) {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: hidden;
+    margin: 0;
+
+    .col-12 {
+      padding: 0;
+      region-item {
+        height: 100%;
+      }
+    }
+  }
 }

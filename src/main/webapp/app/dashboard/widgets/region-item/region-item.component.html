@@ -1,0 +1,42 @@
+<div class="card col-md-11">
+    <div class="card-body item-body">
+        <div class="item-wrapper row">
+            <div class="col-md-3 region-img-wrapper">
+                <img src="/content/images/regions/vojvodina.jpg" alt="Vojvodina">
+                <div class="region-title"><h1>Vojvodina</h1></div>
+                <div class="button-next" (click)="loadNext.emit(true)">NEXT</div>
+            </div>
+            <div class="col-md-6 chart-wrapper">
+                
+                <div class="card">
+                    <div class="card-body"> 
+                        <div class="d-flex no-block">
+                            <div class="m-r-20 align-self-center"><img src="/content/images/icon/income.png" alt="Income" /></div>
+                            <div class="align-self-center">
+                                <h6 class="text-muted m-t-10 m-b-0">Total Income</h6>
+                                <h2 class="m-t-0">953,000</h2>
+                            </div>
+                        </div>
+
+                        <div class="chart">
+                            <canvas baseChart 
+                                [datasets]="lineChartData1" 
+                                [labels]="config.labels" 
+                                [options]="config.options" 
+                                [colors]="config.lineColors" 
+                                [legend]="config.legend" 
+                                [chartType]="config.type"> 
+                            </canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 energy-data-wrapper">
+                <energy-data-column [itemList]="energyItemList"></energy-data-column>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-1 arrow-wrapper">
+    <div class="open-details"></div>
+</div>

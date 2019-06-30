@@ -21,6 +21,8 @@ import { TotalEarningComponent } from './dashboard-components/total-earnings/te.
 import { FeedsComponent } from './dashboard-components/feeds/feeds.component';
 import { EarningComponent } from './dashboard-components/earning-report/earning-report.component';
 import { ActivityComponent } from './dashboard-components/activity-timeline/activity.component';
+import { RegionItemComponent } from './widgets/region-item/region-item.component';
+import { EnergyDataColumnComponent } from './widgets/region-item/enegy-data-column/energy-data-column.component';
 
 @NgModule({
   imports: [FormsModule, CommonModule, NgbModule, ChartsModule, ChartistModule],
@@ -39,7 +41,9 @@ import { ActivityComponent } from './dashboard-components/activity-timeline/acti
     TotalEarningComponent,
     FeedsComponent,
     EarningComponent,
-    ActivityComponent
+    ActivityComponent,
+    RegionItemComponent,
+    EnergyDataColumnComponent
   ],
   exports: [
     IncomeCounterComponent,
@@ -56,7 +60,9 @@ import { ActivityComponent } from './dashboard-components/activity-timeline/acti
     TotalEarningComponent,
     FeedsComponent,
     EarningComponent,
-    ActivityComponent
+    ActivityComponent,
+    RegionItemComponent,
+    EnergyDataColumnComponent
   ]
 })
 export class DashboardComponentsModule {}

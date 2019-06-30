@@ -1,0 +1,19 @@
+:host {
+  display: flex;
+  flex-direction: column;
+
+  i {
+    color: white;
+    transform: scale(1.8);
+  }
+
+  .card {
+    &:last-child {
+      margin-bottom: 0 !important;
+    }
+
+    &:first-child {
+      margin-top: 20px;
+    }
+  }
+}
