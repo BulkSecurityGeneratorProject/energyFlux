@@ -4,7 +4,8 @@
             <div class="col-md-3 region-img-wrapper">
                 <img src="/content/images/regions/vojvodina.jpg" alt="Vojvodina">
                 <div class="region-title"><h1>Vojvodina</h1></div>
-                <div class="button-next" (click)="loadNext.emit(true)">NEXT</div>
+                <div class="button-move prev" (click)="changeReg.emit(-1)">BACK</div>
+                <div class="button-move next" (click)="changeReg.emit(1)">NEXT</div>
             </div>
             <div class="col-md-6 chart-wrapper">
                 

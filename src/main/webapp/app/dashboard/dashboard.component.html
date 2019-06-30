@@ -1,14 +1,14 @@
 <div class="row region-list" #regionList>
     <div class="col-12">
-        <region-item (loadNext)="scrollRight()"></region-item>
+        <region-item (changeReg)="scrollHoriz($event)"></region-item>
     </div>
     <div class="col-12">
-        <region-item></region-item>
+        <region-item (changeReg)="scrollHoriz($event)"></region-item>
     </div>
     <div class="col-12">
-        <region-item></region-item>
+        <region-item (changeReg)="scrollHoriz($event)"></region-item>
     </div>
     <div class="col-12">
-        <region-item></region-item>
+        <region-item (changeReg)="scrollHoriz($event)"></region-item>
     </div>
 </div>

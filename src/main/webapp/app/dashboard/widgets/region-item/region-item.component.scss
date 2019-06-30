@@ -71,10 +71,9 @@ $mobile-image-height: 200px;
             }
           }
 
-          .button-next {
+          .button-move {
             background: rgba(255, 255, 255, 0.8);
             position: absolute;
-            right: 2px;
             top: calc(50% - 24px);
             padding: 10px;
             letter-spacing: 0.1em;
@@ -87,6 +86,14 @@ $mobile-image-height: 200px;
 
             @media screen and (max-width: 990px) {
               display: block;
+            }
+
+            &.next {
+              right: 2px;
+            }
+
+            &.prev {
+              left: 2px;
             }
           }
 

@@ -9,7 +9,7 @@ export class DashboardComponent {
   @ViewChild('regionList', { static: false }) regionList: any;
   constructor() {}
 
-  scrollRight() {
-    this.regionList.nativeElement.scrollLeft += window.innerWidth;
+  scrollHoriz(direction: number) {
+    this.regionList.nativeElement.scrollLeft += direction * window.innerWidth;
   }
 }
