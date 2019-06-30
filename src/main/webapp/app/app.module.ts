@@ -18,7 +18,7 @@ import { EnergyFluxAppRoutingModule } from './app-routing.module';
 import { EnergyFluxDashboardModule } from './dashboard/dashboard.module';
 import * as moment from 'moment';
 // jhipster-needle-angular-add-module-import JHipster will add new module here
-import { JhiMainComponent, NavbarComponent, FooterComponent, PageRibbonComponent, ActiveMenuDirective, ErrorComponent } from './layouts';
+import { JhiMainComponent, ErrorComponent } from './layouts';
 import { CommonModule } from '@angular/common';
 
 @NgModule({
@@ -40,7 +40,7 @@ import { CommonModule } from '@angular/common';
     EnergyFluxDashboardModule,
     EnergyFluxAppRoutingModule
   ],
-  declarations: [JhiMainComponent, NavbarComponent, ErrorComponent, PageRibbonComponent, ActiveMenuDirective, FooterComponent],
+  declarations: [JhiMainComponent, ErrorComponent],
   providers: [
     {
       provide: HTTP_INTERCEPTORS,

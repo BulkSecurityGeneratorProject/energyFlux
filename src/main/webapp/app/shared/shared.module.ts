@@ -1,5 +1,5 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { EnergyFluxSharedCommonModule, JhiLoginModalComponent, HasAnyAuthorityDirective } from './';
+import { EnergyFluxSharedCommonModule, HasAnyAuthorityDirective } from './';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { RouterModule } from '@angular/router';
 import { NavigationComponent } from './header-navigation/navigation.component';
@@ -14,22 +14,14 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
 
 @NgModule({
   imports: [EnergyFluxSharedCommonModule, PerfectScrollbarModule, NgbModule, RouterModule],
-  declarations: [JhiLoginModalComponent, SidebarComponent, HasAnyAuthorityDirective, NavigationComponent],
-  entryComponents: [JhiLoginModalComponent],
+  declarations: [SidebarComponent, HasAnyAuthorityDirective, NavigationComponent],
   providers: [
     {
       provide: PERFECT_SCROLLBAR_CONFIG,
       useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG
     }
   ],
-  exports: [
-    PerfectScrollbarModule,
-    EnergyFluxSharedCommonModule,
-    JhiLoginModalComponent,
-    HasAnyAuthorityDirective,
-    SidebarComponent,
-    NavigationComponent
-  ],
+  exports: [PerfectScrollbarModule, EnergyFluxSharedCommonModule, HasAnyAuthorityDirective, SidebarComponent, NavigationComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class EnergyFluxSharedModule {

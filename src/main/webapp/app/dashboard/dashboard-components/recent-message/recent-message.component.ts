@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
 export class RecentmessageComponent {
   recentmessages: Object[] = [
     {
-      image: 'content/assets/images/users/1.jpg',
+      image: 'content//images/users/1.jpg',
       name: 'James Anderson',
       message:
         // tslint:disable-next-line:max-line-length
@@ -15,14 +15,14 @@ export class RecentmessageComponent {
       status: 'online'
     },
     {
-      image: 'content/assets/images/users/2.jpg',
+      image: 'content//images/users/2.jpg',
       name: 'Jon Doe',
       message: 'Simply dummy text of the printing and typesetting industry.',
       time: '9:30 AM',
       status: 'busy'
     },
     {
-      image: 'content/assets/images/users/4.jpg',
+      image: 'content//images/users/4.jpg',
       name: 'Jane Doe',
       message:
         // tslint:disable-next-line:max-line-length
@@ -31,7 +31,7 @@ export class RecentmessageComponent {
       status: 'away'
     },
     {
-      image: 'content/assets/images/users/5.jpg',
+      image: 'content//images/users/5.jpg',
       name: 'Marriah Carry',
       message:
         // tslint:disable-next-line:max-line-length
@@ -40,14 +40,14 @@ export class RecentmessageComponent {
       status: 'offline'
     },
     {
-      image: 'content/assets/images/users/6.jpg',
+      image: 'content//images/users/6.jpg',
       name: 'Steave Rogers',
       message: 'Simply dummy text of the printing and typesetting industry.',
       time: '9:02 AM',
       status: 'online'
     },
     {
-      image: 'content/assets/images/users/5.jpg',
+      image: 'content//images/users/5.jpg',
       name: 'Jared White',
       message:
         // tslint:disable-next-line:max-line-length

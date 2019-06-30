@@ -5,23 +5,23 @@
 @import '~chartist/dist/chartist.css';
 @import '~quill/dist/quill.snow.css';
 
-@import '../assets/scss/variable';
+@import './pro-theme/variable';
 // @import "../../../../../../node_modules/bootstrap/scss/bootstrap";
 
-@import '../assets/scss/app';
-@import '../assets/scss/pages';
-@import '../assets/scss/sidebar';
-@import '../assets/scss/icons/font-awesome/css/font-awesome.min.css';
-@import '../assets/scss/icons/simple-line-icons/css/simple-line-icons.css';
-@import '../assets/scss/icons/themify-icons/themify-icons.css';
-@import '../assets/scss/icons/material-design-iconic-font/css/materialdesignicons.min.css';
-@import '../assets/scss/widgets';
-@import '../assets/scss/grid';
-@import '../assets/scss/responsive';
-@import '../assets/scss/spinners.scss';
-@import '../assets/scss/animate.css';
-@import '../assets/scss/theme-settings.scss';
+@import './pro-theme/app';
+@import './pro-theme/pages';
+@import './pro-theme/sidebar';
+@import './pro-theme/icons/font-awesome/css/font-awesome.min.css';
+@import './pro-theme/icons/simple-line-icons/css/simple-line-icons.css';
+@import './pro-theme/icons/themify-icons/themify-icons.css';
+@import './pro-theme/icons/material-design-iconic-font/css/materialdesignicons.min.css';
+@import './pro-theme/widgets';
+@import './pro-theme/grid';
+@import './pro-theme/responsive';
+@import './pro-theme/spinners.scss';
+@import './pro-theme/animate.css';
+@import './pro-theme/theme-settings.scss';
 
-@import '../assets/scss/colors/green';
+@import './pro-theme/colors/green';
 
 @import '~perfect-scrollbar/css/perfect-scrollbar.css';

@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
 export class RecentcommentComponent {
   recentcomments: Object[] = [
     {
-      image: 'content/assets/images/users/1.jpg',
+      image: 'content//images/users/1.jpg',
       name: 'James Anderson',
       comment:
         // tslint:disable-next-line:max-line-length
@@ -16,7 +16,7 @@ export class RecentcommentComponent {
       labelcolor: 'label-light-info'
     },
     {
-      image: 'content/assets/images/users/2.jpg',
+      image: 'content//images/users/2.jpg',
       name: 'Michael Jorden',
       comment:
         // tslint:disable-next-line:max-line-length
@@ -26,7 +26,7 @@ export class RecentcommentComponent {
       labelcolor: 'label-light-success'
     },
     {
-      image: 'content/assets/images/users/4.jpg',
+      image: 'content//images/users/4.jpg',
       name: 'Johnathan Doeting',
       comment:
         // tslint:disable-next-line:max-line-length
@@ -36,7 +36,7 @@ export class RecentcommentComponent {
       labelcolor: 'label-light-danger'
     },
     {
-      image: 'content/assets/images/users/5.jpg',
+      image: 'content//images/users/5.jpg',
       name: 'James Anderson',
       comment:
         // tslint:disable-next-line:max-line-length

@@ -1,20 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { errorRoute, navbarRoute } from './layouts';
-import { DEBUG_INFO_ENABLED } from 'app/app.constants';
+import { errorRoute } from './layouts';
 
-const LAYOUT_ROUTES = [navbarRoute, ...errorRoute];
+const LAYOUT_ROUTES = [...errorRoute];
 
 @NgModule({
-  imports: [
-    RouterModule.forRoot([
-      {
-        path: 'admin',
-        loadChildren: './admin/admin.module#EnergyFluxAdminModule'
-      },
-      ...LAYOUT_ROUTES
-    ])
-  ],
+  imports: [RouterModule.forRoot([...LAYOUT_ROUTES])],
   exports: [RouterModule]
 })
 export class EnergyFluxAppRoutingModule {}
